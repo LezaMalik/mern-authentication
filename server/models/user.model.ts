@@ -18,7 +18,7 @@ export interface UserDocument extends Document {
   hidePassword(): void;
   hashPassword(): Promise<string>;
 }
-
+//Define Schema
 const userSchema = new Schema<UserDocument>({
   username: {
     type: String,
