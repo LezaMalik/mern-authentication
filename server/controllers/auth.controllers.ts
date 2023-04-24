@@ -54,7 +54,7 @@ export const postLoginForgot = async (req: Request, res: Response) => {
   try {
     const user = await UserService.findUserBy("email", sanitizedInput.email);
     if (!user) return res.status(404).send({ message: "No user found with this email address." });
-
+    //Check Token
     const resetToken = TokenService.createToken();
     const tokenExpiryDate = dayjs().add(12, "hours").toDate();
 
