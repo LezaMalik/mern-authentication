@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import sanitize from "mongo-sanitize";
 import passport from "passport";
+//Validation
 import { validateEmail, validateLoginInput, validatePassword } from "@validations/user.validation";
 
 import dayjs from "dayjs";
